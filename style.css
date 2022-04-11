@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+  }
+  @-moz-keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1; }
+  }
+  @-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+  .fadeIn {
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+    }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -200vw;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li{
+  margin: 50px 0;
+}
+
+nav ul li a{
+  color: #fafafa;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav ul li a:after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  border-radius: 5px;
+  background: #fff;
+  bottom: -10px;
+  left: 0;
+  transform-origin: left;
+  transition: transform .5s ease;
+  transform: scaleX(0);
+}
+
+
+nav ul li a:hover:after{
+  transform: scaleX(1);
+}
+
+nav .close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav h2{
+  position: absolute;
+  top:5%;
+  left: 5%;
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  font-size: 2em;
+}
+
+nav .close div::before,
+nav .close div::after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  transition: background .5s ease;
+}
+nav .close div::before{
+  transform: rotate(-45deg);
+}
+
+nav .close div::after{
+  transform: rotate(45deg);
+}
+
+nav .close:hover div::before,
+nav .close:hover div::after{
+  background: rgb(39, 14, 180);
+}
+
+@media (max-width: 992px){
+  h1{
+    font-size: 25px;
+  }
+}
+
+a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.container{
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 30px;
+  height: 20px;
+}
+
+.bars{
+  margin-left:90%;
+  width: 30px;
+  height: 4px;
+  background: rgb(255, 255, 255);
+}
+
+.bars::before,
+.bars::after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: rgb(255, 255, 255);
+}
+
+.bars::before{
+  margin-top: 9px;
+}
+
+.bars::after{
+  margin-top: 18px;
+}
+
+*{
+  padding: 0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+
+.box{
+  width: 100%;
+  height: 600px;
+  padding: 40px 60px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.section-1{
+        height: 100vh;
+        background-image: url(https://gestaodeclinicas.ajmed.com.br/wp-content/uploads/2021/06/97ae288bc10481a0152460e9a3c5faeb.gif);
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+.section-2{
+  background: rgb(36, 39, 75);
+}
+
+.section-3{
+  background-image: url(https://blog.bsource.com.br/assets/img/earlyacess.gif);
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+.section-4{
+      background: rgb(29, 32, 70);
+      height: 350px;
+}
+
+.box p{
+  font-size: 20px;
+  margin-top: 100px;
+}
+
+.box h1{
+  font-size: 50px;
+  text-shadow:  0px 0px 5px #000;
+}
